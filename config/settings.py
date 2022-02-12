@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3%l3skx&+l(nh2@1b#2c_5fc#u7i_3&yf&l5+!!=whtne4v-vb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,3 +124,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 업로드 폴더 관리
+import os
+MEDIA_URL ='/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
